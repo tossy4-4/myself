@@ -3,32 +3,50 @@
 <head>
 <meta charset="UTF-8">
 <title>Higashi Profile</title>
+
 <style>
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-  color: white;
+  background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1c1c1c);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  color: white;
 }
 
+/* 背景アニメーション */
+@keyframes gradientMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* カード */
 .card {
   background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
   border-radius: 20px;
   padding: 40px;
-  width: 350px;
+  width: 360px;
   text-align: center;
-  box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+  box-shadow: 0 0 40px rgba(0,255,255,0.4);
+  animation: fadeIn 1.5s ease;
   transition: 0.3s;
 }
 
 .card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 50px rgba(0, 255, 255, 0.6);
+  transform: translateY(-10px);
+  box-shadow: 0 0 60px rgba(0,255,255,0.8);
+}
+
+/* 登場アニメ */
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.8);}
+  to {opacity: 1; transform: scale(1);}
 }
 
 .profile-img {
@@ -39,14 +57,22 @@ body {
   margin-bottom: 20px;
 }
 
+/* ネオン点滅 */
 h1 {
   margin: 10px 0;
   font-size: 28px;
   letter-spacing: 2px;
+  color: cyan;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px cyan; }
+  to { text-shadow: 0 0 25px cyan, 0 0 40px cyan; }
 }
 
 .role {
-  color: cyan;
+  color: #00ffff;
   margin-bottom: 20px;
 }
 
@@ -69,6 +95,7 @@ h1 {
 
 .social a:hover {
   color: cyan;
+  transform: scale(1.2);
 }
 </style>
 </head>
@@ -82,7 +109,7 @@ h1 {
 
   <div class="info">
     <p>🔥 興味: プログラミング / 英語 / 数学</p>
-    <p>🎮 趣味: ゲーム制作</p>
+    <p>😴 趣味: 寝ること</p>
     <p>📍 Tokyo, Japan</p>
   </div>
 
