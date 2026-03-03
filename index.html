@@ -1,1 +1,97 @@
-東
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Higashi Profile</title>
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 40px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 50px rgba(0, 255, 255, 0.6);
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid cyan;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 10px 0;
+  font-size: 28px;
+  letter-spacing: 2px;
+}
+
+.role {
+  color: cyan;
+  margin-bottom: 20px;
+}
+
+.info {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.info p {
+  margin: 8px 0;
+}
+
+.social a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.social a:hover {
+  color: cyan;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <img src="https://via.placeholder.com/120" class="profile-img">
+  <h1>東 (Higashi)</h1>
+  <div class="role">Student / Future Creator</div>
+
+  <div class="info">
+    <p>🔥 興味: プログラミング / 英語 / 数学</p>
+    <p>🎮 趣味: ゲーム制作</p>
+    <p>📍 Tokyo, Japan</p>
+  </div>
+
+  <div class="social">
+    <a href="#">X</a>
+    <a href="#">GitHub</a>
+    <a href="#">Instagram</a>
+  </div>
+</div>
+
+</body>
+</html>
